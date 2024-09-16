@@ -2,8 +2,8 @@
  *  自定义网站配置 
  */
 const config = {
-  title: "自定义导航",                 //write your website title
-  subtitle: "Cloudflare Workers Dir", //write your website subtitle
+  title: "圆子的导航",                 //write your website title
+  subtitle: "Yuzi's Navigation Station", //write your website subtitle
   logo_icon: "sitemap",               //select your logo by semantic-ui icon (you can get more msg in:https://semantic-ui.com/elements/icon.html)
   hitokoto: true,                     //use hitokoto or not
   search:true,                        //enable search function
@@ -65,28 +65,59 @@ const config = {
       ]
     },
     {
-      name:"学习",
+      name:"论坛",
       icon:"graduation cap",
       list:[
         {
-          url:"https://w3school.com.cn/",
-          name:"W3school在线教程",
+          url:"https://linux.do/",
+          name:"Linux Do",
           desc:"程序员集散地"
         },
         {
-          url:"https://runoob.com/",
-          name:"菜鸟教程",
+          url:"https://www.nodeseek.com/",
+          name:"NodeSeek",
           desc:"程序员集散地"
         },
         {
-          url:"https://segmentfault.com/",
-          name:"思否社区",
+          url:"https://www.nodeloc.com/",
+          name:"Nodeloc",
           desc:"程序员集散地"
         },
         {
           url:"https://jianshu.com/",
           name:"简书",
           desc:"程序员集散地"
+        },
+        {
+          url:"https://it6.cc/",
+          name:"全球IT论坛",
+          desc:"程序员集散地"
+        },
+      ]
+    },
+    {
+      name:"自建服务",
+      icon:"graduation cap",
+      list:[
+        {
+          url:"https://sb.yuzi.us.kg/",
+          name:"Singbox订阅转换",
+          desc:"将clash订阅转化为singbox订阅"
+        },
+        {
+          url:"https://sub.yuzi.us.kg/",
+          name:"订阅转换",
+          desc:"支持多个客户端及多个协议"
+        },
+        {
+          url:"https://tc.yuzi.us.kg/",
+          name:"图床",
+          desc:"将图片转化为链接"
+        },
+        {
+          url:"https://halo.yuzi1.us.kg/",
+          name:"个人博客",
+          desc:"会更新一些有用的内容"
         },
       ]
     }
@@ -112,10 +143,10 @@ addEventListener('fetch', event => {
 function getFavicon(url){
   if(url.match(/https{0,1}:\/\//)){
     //return "https://ui-avatars.com/api/?bold=true&size=36&background=0D8ABC&color=fff&rounded=true&name=" + url.split('//')[1];
-    return "https://www.google.cn/s2/favicons?sz=64&domain_url=" + url;
+    return "https://www.google.com/s2/favicons?sz=64&domain_url=" + url;
   }else{
     //return "https://ui-avatars.com/api/?bold=true&size=36&background=0D8ABC&color=fff&rounded=true&name=" + url;
-    return "https://www.google.cn/s2/favicons?sz=64&domain_url=http://" + url;
+    return "https://www.google.com/s2/favicons?sz=64&domain_url=http://" + url;
   } 
 }
 
